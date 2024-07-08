@@ -1,0 +1,14 @@
+.content2 {
+  margin-top: 1100px;
+  display: flex;
+  justify-content: flex-end;
+}
+.content2 .cont_1 .circle {
+  position: absolute;
+}
+.content2 .cont_1 img {
+  width: 30%;
+}
+.content2 .cont_2 img {
+  width: 40%;
+}/*# sourceMappingURL=dd.css.map */

@@ -1,0 +1,49 @@
+@media only screen and (max-width: 600px) {
+  .header {
+    padding-top: 11px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .header .logo_section img {
+    width: 66px;
+  }
+  .header .main_menu {
+    display: none;
+  }
+  .header .mobile_menu {
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+  }
+  .main .main_copy {
+    font-size: 5.6vw;
+    line-height: 5.4vw;
+    padding-top: 103px;
+    padding-left: 15px;
+  }
+  .main .business_info {
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 33px;
+  }
+  .main .business_info .bi_right {
+    gap: 15px;
+  }
+  .main .main_img {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .main .main_img .img_copy {
+    font-size: 14px;
+    line-height: 19px;
+    width: 100%;
+  }
+  .main .main_img .arrow {
+    position: fixed;
+    bottom: 15px;
+    left: calc(50% - 18.5px);
+    display: block;
+  }
+}/*# sourceMappingURL=mobile.css.map */

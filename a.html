@@ -1,0 +1,800 @@
+<meta charset="UTF-8">
+<title>Su-yeon's Portfolio</title>
+<style>
+@import url(//cdn.jsdelivr.net/nanumsquare/1.0/nanumsquare.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+font-family:'NanumSquare',helvetica,sans-serif;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+#content{width: 1000px; margin: 50px auto;}
+#content .port{display: inline-block; width: 306px; height: 270px; box-sizing: border-box; -webkit-box-sizing: border-box; border: 1px solid #cecece; border-top-left-radius: 15px; border-bottom-right-radius: 15px; margin-right: 35px; background-color:#fff3fa; overflow:hidden; position:relative; margin-bottom: 42px; cursor: pointer;}
+#content .port.last{margin-right: 0;}
+#content .port.round{border-radius: 15px;}
+#content .port .img{box-sizing:border-box; -webkit-box-sizing; border-box; width: 100%; height: 220px; padding: ;}
+#content .port .txt{display: block; background-image:url(http://bingbongx2.dothome.co.kr/public/uploads/img/bg_bar.png); /*background-color:#ffeaf6;*/ color: #393939; height: 49px; font-weight:bold; line-height: 49px; position:absolute; left:0; bottom: 0; width: 100%; text-align: center; font-size:18px;}
+#content2{background-color:#fff3fa; padding: 70px 0;}
+#content2 .wrap{width: 1000px; margin: 0 auto;}
+#content2 .wrap .me h1{color: #d61d88; text-align:center; font-weight: bold; font-size: 21px;}
+#content2 .wrap .me .img{width: 176px; height: 204px; border: 1px solid #cecece; background-color:#FFF; margin: 30px auto;}
+#content2 .wrap .me .txt{display: block; margin: 0 auto; text-align: center; width: 100%; font-size: 17px;}
+#content2 .wrap .work{width: 750px; margin: 0 auto; overflow:hidden;}
+#content2 .wrap .work .left{width: 375px; float: left;}
+#content2 .wrap .work .title{color: #594a53; margin-bottom: 10px;}
+#content2 .wrap .work .tbl{border: 1px solid #cecece; border-collapse: collapse; background-color:#FFF;}
+#content2 .wrap .work .tbl tr{border: 1px solid #cecece;}
+#content2 .wrap .work .tbl td{border: 1px solid #cecece; padding: 10px;}
+#content2 .wrap .work .line{display: inline-block; background-color:#c75698; width: 1px; height:12px; vertical-align: middle; margin-bottom: 1px;}
+#content2 .wrap .work .right{width: 375px; float: right; box-sizing: border-box; padding-left: 38px;}
+.mgt25{margin-top: 25px;}
+.center{text-align: center;}
+
+#footer{background-color:#594a53; height: 120px; width: 100%; position:relative;}
+#footer .copy{color: #fff3fa; text-align: center; line-height: 120px;}
+
+@media only screen and (max-width: 800px) {
+    #content {
+      width: 700px;
+        margin-left:30px;
+    }
+      #content2 .wrap {
+      width: auto;
+        margin-left:20px;
+    }
+    #content2 .wrap .work {
+      width: auto;
+        margin-left:20px;
+    }
+      #content2 .wrap .work .left {
+        width: auto;
+        float: left;
+    }
+      #content2 .wrap .work .right {
+        margin-left: -14px;
+        float: left;
+    }
+      div#popup {
+        display: none;
+      width: 800px;
+        max-width: 800px;
+        top:10px;
+        left:0px;
+      position: absolute;
+        margin-top: -90px;
+          .btn_x {position:absolute; top:15px; right:54px;}
+    }
+       div#m_popup {display: none;}
+  }
+@media only screen and (max-width: 600px) {
+      #content {
+      width: 600px;
+        margin-left:30px;
+    }
+    #content2 .wrap {
+      width: auto;
+        margin-left:10px;
+    }
+    #content2 .wrap .work {
+      width: auto;
+        margin-left:10px;
+    }
+      #content2 .wrap .work .left {
+        width: auto;
+        float: left;
+    }
+      #content2 .wrap .work .right {
+        margin-left: -36px;
+        float: left;
+    }
+      div#m_popup {
+      width: 100%;
+        max-width: 600px;
+        height: 600px;
+        top:0px;
+        left:0px;
+        margin-top:-104px;
+      position: absolute;
+       display: none;
+   
+    }
+    div#m_popup .btn_x {position:absolute; top:15px; right:15px;}
+    div#m_popup .site,  div#m_popup .site img {
+        width:100%;
+    }
+      div#popup {
+          display: none;
+      }
+}
+
+@media only screen and (max-width: 1280px) {
+      div#m_popup {
+          display: none;
+      }
+      div#popup {
+          display: none;
+       }
+}
+
+</style>
+
+
+
+<section id="content">
+    <div class="port">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_01.gif" alt="">
+        </div>
+        <span class="txt">청인리쿠르팅센터</span>
+    </div>
+    <div class="port round">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_02.gif" alt="">
+        </div>
+        <span class="txt">투자클럽 이벤트</span>
+    </div>
+    <div class="port last">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_03.gif" alt="">
+        </div>
+        <span class="txt">청인 세미나</span>
+    </div>
+    <div class="port">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_04.gif" alt="">
+        </div>
+        <span class="txt">청개구리증권 강연회</span>
+    </div>
+    <div class="port round">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_05.gif" alt="">
+        </div>
+        <span class="txt">투자클럽 강연회</span>
+    </div>
+    <div class="port last">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_06.gif" alt="">
+        </div>
+        <span class="txt">청인섬머 페스티벌 포스터</span>
+    </div>
+    <div class="port">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_07.gif" alt="">
+        </div>
+        <span class="txt">ATTo 앱제작</span>
+    </div>
+    <div class="port round">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_08.gif" alt="">
+        </div>
+        <span class="txt">청개구리정신 모바일</span>
+    </div>
+    <div class="port last">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_09.gif" alt="">
+        </div>
+        <span class="txt">투자클럽 웹툰편집작업</span>
+    </div>
+    <div class="port">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_10.gif" alt="">
+        </div>
+        <span class="txt">한국투자증권 이벤트</span>
+    </div>
+    <div class="port round">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_11.gif" alt="">
+        </div>
+        <span class="txt">CGV 이벤트</span>
+    </div>
+    <div class="port last">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_12.gif" alt="">
+        </div>
+        <span class="txt">T모아쿠폰 이벤트</span>
+    </div>
+    <div class="port">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_13.gif" alt="">
+        </div>
+        <span class="txt">제휴통합 Email</span>
+    </div>
+    <div class="port round">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_14.gif" alt="">
+        </div>
+        <span class="txt">GS&POINT 메인페이지 배너</span>
+    </div>
+    <div class="port last">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_15.gif" alt="">
+        </div>
+        <span class="txt">출석체크 이벤트</span>
+    </div>
+    <div class="port">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_16.gif" alt="">
+        </div>
+        <span class="txt">GS&패널 이벤트</span>
+    </div>
+    <div class="port round">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17.gif" alt="">
+        </div>
+        <span class="txt">autoOasis 앱 이벤트</span>
+    </div>
+    <div class="port last">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_18.gif" alt="">
+        </div>
+        <span class="txt">마리로랑생전 이벤트</span>
+    </div>
+    <div class="port">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_19.gif" alt="">
+        </div>
+        <span class="txt">GS&POINT 할인쿠폰증정 프로모션</span>
+    </div>
+    <div class="port round">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_20.gif" alt="">
+        </div>
+        <span class="txt">OIL DAY 퀴즈 이벤트</span>
+    </div>
+    <div class="port last">
+        <div class="img">
+            <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21.gif" alt="">
+        </div>
+        <span class="txt">월페이퍼 제작</span>
+    </div>
+</section>
+<section id="content2">
+    <div class="wrap">
+        <div class="me">
+            <h1>김수연</h1>
+            <div class="img"><img src="http://bingbongx2.dothome.co.kr/public/uploads/img/sy.jpg" alt="인물 이미지 입니다." width="100%;"></div>
+            <span class="txt">"모든 순간 최선을 다했습니다."</span>
+        </div>
+        <div class="work">
+            <div class="left">
+                <div class="title mgt25">
+                    <span class="line"></span>
+                    기본사항
+                </div>
+                <table class="tbl" border="0" cellspacing="0" cellpadding="0">
+                    <tbody><tr>
+                        <td>나이</td>
+                        <td>1990년생</td>
+                    </tr>
+                    <tr>
+                        <td>성별</td>
+                        <td>여자</td>
+                    </tr>
+                    <tr>
+                        <td>주소</td>
+                        <td>서울특별시 금천구 독산로32나길 36</td>
+                    </tr>
+                    <tr>
+                        <td>휴대폰</td>
+                        <td>010-7676-3802</td>
+                    </tr>
+                    <tr>
+                        <td>E-Mail</td>
+                        <td>shine_yi@naver.com</td>
+                    </tr>
+                </tbody></table>
+                <div class="title mgt25">
+                    <span class="line"></span>
+                    경력사항
+                </div>
+                <table class="tbl" border="0" cellspacing="0" cellpadding="0">
+                    <tbody><tr>
+                        <td>금융권(주식정보제공)회사 (2015.04~2016.09)</td>
+                    </tr>
+                    <tr>
+                        <td>이지미디어 (2017.06~2017.12)</td>
+                    </tr>
+                    <tr>
+                        <td>애드티브이노베이션 (2018.05~2018.07)</td>
+                    </tr>
+                    <tr>
+                        <td>구립아람어린이집 (2019.03~2019.10)</td>
+                    </tr>
+                </tbody></table>
+            </div>
+            <div class="right">
+                <div class="title mgt25">
+                    <span class="line"></span>
+                    보유기술
+                </div>
+                <table class="tbl" border="0" cellspacing="0" cellpadding="0">
+                    <tbody><tr>
+                        <td>Adobe Photoshop</td>
+                        <td class="center">상</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe Illustrator</td>
+                        <td class="center">중상</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe Dreamweaver</td>
+                        <td class="center">중상</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe InDesign</td>
+                        <td class="center">중상</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe Premiere Pro</td>
+                        <td class="center">중</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe Flash</td>
+                        <td class="center">중</td>
+                    </tr>
+                    <tr>
+                        <td>HTML5 / CSS</td>
+                        <td class="center">중</td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+#popup{display:none; width: 1050px; height: 800px; overflow-y: scroll; background-color:#fff3fa; position:fixed; left: calc(50% - 525px); top:33%; margin: 0, auto; margin-top: -250px;  z-index: 10001; box-sizing: border-box; -webkit-box-sizing: border-box; padding: 25px;}
+#popup .btn_x{position:absolute; top: 10px; right:8px; cursor: pointer;}
+#dim{width: 100%; background-color: rgba(0, 0, 0, 0.65); position: fixed; left: 0; top: 0px;bottom:0px; margin: 0; padding: 0; display: none; z-index: 10000;}
+#popup .title{margin-bottom: 20px; font-size:17px;}
+#popup .title .line{display: inline-block; background-color: #c75698; width: 1px; height:17px; vertical-align: middle; margin-bottom: 4px;}
+#popup .site{width:1000px; border: 1px solid #cecece; margin-bottom:25px; padding:0;}
+#popup .site a{display:block; margin:0 auto; padding:0;}
+#popup .site img{display:block; margin:0 auto;}
+#popup .port_d{display: none;}
+
+#m_popup{display:none; width: 600px; height: 600px; overflow-y: scroll; background-color:#fff3fa; position:fixed; left:22%; top:33%; margin: 0, auto; margin-top: -250px;  z-index: 10001; box-sizing: border-box; -webkit-box-sizing: border-box; padding: 25px;}
+#m_popup .btn_x{position:absolute; top: 15px; right:100px; cursor: pointer;}
+#m_dim{width: 100%; height: 700px; background-color: rgba(0, 0, 0, 0.65); position: fixed; left: 0; top: 0px; margin: 0; padding: 0; display: none; z-index: 10000;}
+#m_popup .title{margin-bottom: 20px; font-size:17px;}
+#m_popup .title .line{display: inline-block; background-color: #c75698; width: 1px; height:17px; vertical-align: middle; margin-bottom: 4px;}
+#m_popup .site{width:600px; border: 1px solid #cecece; margin-bottom:25px; padding:0;}
+#m_popup .site a{display:block; margin:0 auto; padding:0;}
+#m_popup .site img{display:block; margin:0 auto;}
+#m_popup .port_d{display: none;}
+</style>
+<div id="dim"></div>
+<div id="popup">
+<img src="http://bingbongx2.dothome.co.kr/public/uploads/img/x.png" alt="" class="btn_x">
+<div class="port_d port_d0">
+    <div class="title"><span class="line"></span>&nbsp;청인리쿠르팅센터_기여도100%<br>&nbsp;제작기간:16.05.20~16.05.27 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_1-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_1-2.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_1-3.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d1">
+    <div class="title"><span class="line"></span>&nbsp;투자클럽 이벤트 랜딩_기여도100%<br>&nbsp;제작기간:16.09.22~16.09.23 (2일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_2-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_2-2.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d2">
+    <div class="title"><span class="line"></span>&nbsp;청인 세미나 랜딩_기여도100%<br>&nbsp;제작기간:16.08.18 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_3-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_3-2.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d3">
+    <div class="title"><span class="line"></span>&nbsp;청개구리증권 강연회_기여도100%<br>&nbsp;제작기간:16.04.19~16.04.25 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_4-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_4-2.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_4-3.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_4-4.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_4-5.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d4">
+    <div class="title"><span class="line"></span>&nbsp;투자클럽 강연회랜딩_기여도100%<br>&nbsp;제작기간:15.07.20~15.07.21 (2일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_5-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_5-2.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d5">
+    <div class="title"><span class="line"></span>&nbsp;청인섬머페스티벌 포스터_기여도100%<br>&nbsp;제작기간:16.05.20~16.05.27 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_6-1.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d6">
+    <div class="title"><span class="line"></span>&nbsp;ATTo 앱제작_기여도100%<br>&nbsp;제작기간:16.12.23~16.12.29 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-2.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-3.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-4.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-5.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-6.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-7.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-8.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-9.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-10.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-11.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-12.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-13.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-14.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-15.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-16.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-17.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d7">
+    <div class="title"><span class="line"></span>&nbsp;청개구리정신 모바일_기여도100%<br>&nbsp;제작기간:16.05.20~16.05.27 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-2.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-3.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-4.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-5.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-6.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d8">
+    <div class="title"><span class="line"></span>&nbsp;투자클럽 웹툰편집작업_기여도100%<br>&nbsp;제작기간:16.05.20~16.05.27 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_9-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_9-2.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d9">
+    <div class="title"><span class="line"></span>&nbsp;한국투자증권 이벤트_기여도100%<br>&nbsp;제작기간:17.07.05 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_10-1.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d10">
+    <div class="title"><span class="line"></span>&nbsp;CGV 이벤트_기여도100%<br>&nbsp;제작기간:17.07.28 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_11-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_11-2.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_11-3.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_11-4.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d11">
+    <div class="title"><span class="line"></span>&nbsp;T모아쿠폰 이벤트_기여도100%<br>&nbsp;제작기간:17.12.11 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_12-1.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d12">
+    <div class="title"><span class="line"></span>&nbsp;제휴통합 Email_기여도100%<br>&nbsp;제작기간:17.11.29 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_13-1.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d13">
+    <div class="title"><span class="line"></span>&nbsp;GS&POINT 메인페이지 배너_기여도100%<br>&nbsp;제작기간:17.08.11 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_14-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_14-2.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d14">
+    <div class="title"><span class="line"></span>&nbsp;출석체크 이벤트_기여도100%<br>&nbsp;제작기간:17.08.28 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_15-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_15-2.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_15-3.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d15">
+    <div class="title"><span class="line"></span>&nbsp;GS&패널 이벤트_기여도100%<br>&nbsp;제작기간:17.08.18 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_16-1.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d16">
+    <div class="title"><span class="line"></span>&nbsp;autoOasis 앱 이벤트_기여도100%<br>&nbsp;제작기간:매 달 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17-2.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17-3.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17-4.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17-5.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d17">
+    <div class="title"><span class="line"></span>&nbsp;마리로랑생전 이벤트_기여도100%<br>&nbsp;제작기간:17.11.23~17.11.24 (2일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_18-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_18-2.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d18">
+    <div class="title"><span class="line"></span>&nbsp;GS&POINT 할인쿠폰증정 프로모션_기여도100%<br>&nbsp;제작기간:17.10.16 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_19-1.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d19">
+    <div class="title"><span class="line"></span>&nbsp;OIL DAY 퀴즈 이벤트_기여도100%<br>&nbsp;제작기간:17.10.27 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_20-1.jpg" alt="">
+    </div>
+</div>
+<div class="port_d port_d20">
+    <div class="title"><span class="line"></span>&nbsp;월페이퍼_기여도90%<br>&nbsp;제작기간:매 달 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21-1.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21-2.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21-3.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21-4.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21-5.jpg" alt="">
+    </div>
+</div>
+</div>
+
+<div id="m_dim"></div>
+<div id="m_popup">
+<img src="http://bingbongx2.dothome.co.kr/public/uploads/img/x.png" alt="" class="btn_x">
+<div class="m_port_d port_d0">
+    <div class="title"><span class="line"></span>&nbsp;청인리쿠르팅센터_기여도100%<br>&nbsp;제작기간:16.05.20~16.05.27 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_1-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_1-2_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_1-3_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d1">
+    <div class="title"><span class="line"></span>&nbsp;투자클럽 이벤트 랜딩_기여도100%<br>&nbsp;제작기간:16.09.22~16.09.23 (2일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_2-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_2-2_mv.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d2">
+    <div class="title"><span class="line"></span>&nbsp;청인 세미나 랜딩_기여도100%<br>&nbsp;제작기간:16.08.18 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_3-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_3-2_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d3">
+    <div class="title"><span class="line"></span>&nbsp;청개구리증권 강연회_기여도100%<br>&nbsp;제작기간:16.04.19~16.04.25 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_4-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_4-2_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_4-3_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_4-4_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_4-5_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d4">
+    <div class="title"><span class="line"></span>&nbsp;투자클럽 강연회랜딩_기여도100%<br>&nbsp;제작기간:15.07.20~15.07.21 (2일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_5-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_5-2_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d5">
+    <div class="title"><span class="line"></span>&nbsp;청인섬머페스티벌 포스터_기여도100%<br>&nbsp;제작기간:16.05.20~16.05.27 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_6-1_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d6">
+    <div class="title"><span class="line"></span>&nbsp;ATTo 앱제작_기여도100%<br>&nbsp;제작기간:16.12.23~16.12.29 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-2_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-3_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-4_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-5_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-6_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-7_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-8_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-9_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-10_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-11_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-12_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-13_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-14_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-15_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-16_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_7-17_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d7">
+    <div class="title"><span class="line"></span>&nbsp;청개구리정신 모바일_기여도100%<br>&nbsp;제작기간:16.05.20~16.05.27 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-2_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-3_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-4_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-5_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_8-6_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d8">
+    <div class="title"><span class="line"></span>&nbsp;투자클럽 웹툰편집작업_기여도100%<br>&nbsp;제작기간:16.05.20~16.05.27 (1주일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_9-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_9-2_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d9">
+    <div class="title"><span class="line"></span>&nbsp;한국투자증권 이벤트_기여도100%<br>&nbsp;제작기간:17.07.05 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_10-1_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d10">
+    <div class="title"><span class="line"></span>&nbsp;CGV 이벤트_기여도100%<br>&nbsp;제작기간:17.07.28 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_11-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_11-2_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_11-3_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_11-4_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d11">
+    <div class="title"><span class="line"></span>&nbsp;T모아쿠폰 이벤트_기여도100%<br>&nbsp;제작기간:17.12.11 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_12-1_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d12">
+    <div class="title"><span class="line"></span>&nbsp;제휴통합 Email_기여도100%<br>&nbsp;제작기간:17.11.29 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_13-1_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d13">
+    <div class="title"><span class="line"></span>&nbsp;GS&POINT 메인페이지 배너_기여도100%<br>&nbsp;제작기간:17.08.11 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_14-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_14-2_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d14">
+    <div class="title"><span class="line"></span>&nbsp;출석체크 이벤트_기여도100%<br>&nbsp;제작기간:17.08.28 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_15-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_15-2_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_15-3_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d15">
+    <div class="title"><span class="line"></span>&nbsp;GS&패널 이벤트_기여도100%<br>&nbsp;제작기간:17.08.18 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_16-1_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d16">
+    <div class="title"><span class="line"></span>&nbsp;autoOasis 앱 이벤트_기여도100%<br>&nbsp;제작기간:매 달 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17-2_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17-3_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17-4_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_17-5_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d17">
+    <div class="title"><span class="line"></span>&nbsp;마리로랑생전 이벤트_기여도100%<br>&nbsp;제작기간:17.11.23~17.11.24 (2일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_18-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_18-2_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d18">
+    <div class="title"><span class="line"></span>&nbsp;GS&POINT 할인쿠폰증정 프로모션_기여도100%<br>&nbsp;제작기간:17.10.16 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_19-1_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d19">
+    <div class="title"><span class="line"></span>&nbsp;OIL DAY 퀴즈 이벤트_기여도100%<br>&nbsp;제작기간:17.10.27 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_20-1_m.jpg" alt="">
+    </div>
+</div>
+<div class="m_port_d port_d20">
+    <div class="title"><span class="line"></span>&nbsp;월페이퍼_기여도90%<br>&nbsp;제작기간:매 달 (1일)</div>
+    <div class="site">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21-1_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21-2_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21-3_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21-4_m.jpg" alt="">
+        <img src="http://bingbongx2.dothome.co.kr/public/uploads/img/index_21-5_m.jpg" alt="">
+    </div>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+$(function() {
+// port 클래스를 클릭할 때 실행되는 함수
+$(".port").click(function() {
+    if($(window).width() < 768){ //모바일 클릭
+        $("#m_dim").show();
+    $("#m_popup").show().scrollTop(0, 0);
+    // 모든 m_port_d 요소를 숨김
+    $(".m_port_d").hide();
+    // 클릭된 port의 인덱스에 해당하는 m_port_d 요소를 보이게 함
+    $(".port_d" + $(this).index()).show();
+    }else{
+         // dim 요소와 popup 요소를 보이게 함
+    $("#dim").show();
+    $("#popup").show().scrollTop(0, 0);
+    // 모든 port_d 요소를 숨김
+    $(".port_d").hide();
+    // 클릭된 port의 인덱스에 해당하는 port_d 요소를 보이게 함
+    $(".port_d" + $(this).index()).show();
+    }
+   
+});
+
+// popup의 닫기 버튼이나 dim 요소를 클릭할 때 실행되는 함수
+$("#popup .btn_x, #dim").click(function() {
+    // dim 요소와 popup 요소를 숨김
+    $("#dim").hide();
+    $("#popup").hide();
+});
+
+
+// m_popup의 닫기 버튼이나 m_dim 요소를 클릭할 때 실행되는 함수
+$("#m_popup .btn_x, #m_dim").click(function() {
+    // m_dim 요소와 m_popup 요소를 숨김
+    $("#m_dim").hide();
+    $("#m_popup").hide();
+});
+});
+
+</script>

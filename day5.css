@@ -1,0 +1,42 @@
+body {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  background-color: #fff;
+}
+
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo_section {
+  mix-blend-mode: difference;
+}
+.header .main_menu {
+  color: #fff;
+  mix-blend-mode: difference;
+  display: flex;
+  gap: 20px;
+}
+.header .main_menu li {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.main {
+  font-size: 16vw;
+  font-weight: 500;
+  height: 100vh;
+  text-align: center;
+  line-height: 100vh;
+  background-image: url("./img/back.jpg");
+  color: #fff;
+}/*# sourceMappingURL=day5.css.map */

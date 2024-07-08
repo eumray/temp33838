@@ -1,0 +1,72 @@
+body {
+    font-family: "Inter", "Noto Sans KR", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-color: #FEFAF5;
+}
+
+ul,
+li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:50px;
+    padding-left:40px;
+    padding-right:40px;
+    box-sizing: border-box;
+    border-bottom:1px solid #000;
+    font-size:16px;
+    .cate_menu{
+        display:flex;
+        gap:20px;
+    }
+    .logo_section{
+        position: absolute;
+        left:calc(50% - 100px);
+        top:14px;
+    }
+    .my_menu{
+        display:flex;
+        gap:20px;
+    }
+}
+
+.pr_items{
+    display:flex;
+    flex-wrap: wrap;
+    .pr_item{
+        width:33.333%;
+        position: relative;
+        border-right:1px solid #000;
+        border-bottom:1px solid #000;
+        box-sizing: border-box;
+        &:nth-child(3n){
+            border-right:none;
+        }
+        .pr_img{
+            img{
+                width:100%;
+            }
+        }
+        .pr_img{
+         
+            img{
+                width:100%;
+            }
+        }
+        .pr_info{
+            font-size:16px;
+            position: absolute;
+            left:15%;
+            top:15%;
+        }
+    }
+}
+
+

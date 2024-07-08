@@ -1,0 +1,62 @@
+body{
+    font-family:"Roboto","Noto Sans KR", sans-serif;
+    padding:0px;
+    margin:0px;
+}
+.join_section{
+    width:400px;
+    font-size:16px;
+    text-align: center;
+    margin:auto;
+}
+.logo img{
+    width:200px;
+}
+.title{
+    margin-top:20px;
+    font-size:20px;
+}
+.desc{
+    margin-top:10px;
+}
+.input_item{
+    margin-top:15px;
+}
+
+.input_item input{
+    width:100%;
+    height:50px;
+    appearance: none;
+    padding-left:15px;
+    box-sizing: border-box;
+    border:1px solid lightgray;
+}
+.input_item select{
+    width:100%;
+    height:50px;
+    appearance: none;
+    border-radius: 0px;
+    border:1px solid lightgray;
+    padding-left:15px;
+    box-sizing: border-box;
+   
+}
+.input_item{
+    background-color: blue;;
+}
+.input_item.id_item{
+    background-color: red;
+}
+.input_item textarea{
+    width:100%;
+    padding:10px;
+    box-sizing: border-box;
+}
+.bt_section button{
+    width:100%;
+    height:50px;
+    background-color: black;
+    color:white;  
+    border:none;
+    margin-top:10px;
+}
